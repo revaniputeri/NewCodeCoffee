@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="348" pageHeight="425" columnWidth="308" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f9aa1885-180c-4f88-894c-623a0b31d153">
+	<property name="ireport.zoom" value="1.9487171000000014"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="kode" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select*from detail_transaksi a left join transaksi b on a.kode_transaksi=b.kode_transaksi where b.kode_transaksi = $P{kode}]]>
+	</queryString>
+	<field name="kode_detail_transaksi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kode_transaksi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kode_menu" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_menu" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga_menu" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="qty" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_menu" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_customer" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_transaksi" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sub_total" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kasir" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="308" height="19" uuid="02efd864-05ca-4a42-baf7-0b87a895ecaa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[Code Coffee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="19" width="308" height="10" uuid="ce777abe-3811-43e8-b27e-86dcf2e81123"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Blimbing Indah St.8, 17010 Paris, France.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="29" width="308" height="12" uuid="1b02d804-6b7a-4504-99c3-e413a9e0507a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Contact Us +33 21050807]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="41" width="308" height="1" uuid="823fbd09-da4e-4082-a763-056e521f3740"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="65" height="14" uuid="4ef5382a-1658-4b82-af60-6881a939bd78"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Kode Transaksi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="14" width="65" height="14" uuid="74e4c974-f89f-4d1c-8a21-5774e57ef378"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Customer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="14" width="29" height="14" uuid="2a565436-f4e4-435d-a6c1-75f83cbf75c2"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Kasir :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="14" width="10" height="14" uuid="a624e6c8-4c78-43c9-8f81-eb44b990c2aa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="0" width="10" height="14" uuid="ca25646f-b794-419a-9620-70240736d52a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="75" y="0" width="79" height="14" uuid="fa59e772-d40f-47be-b158-7f96f53ea526"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kode_transaksi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="15" width="79" height="13" uuid="a203e8ef-cf63-46d4-a33d-885ef1ca1fa3"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_customer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="229" y="14" width="79" height="14" uuid="039e70ac-8010-4615-b2c6-cd6b99b5b2f0"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kasir}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="200" y="0" width="108" height="14" uuid="0f4ffb2d-173c-4c7a-85ba-ff915765042d"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tanggal_transaksi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="15" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="308" height="1" uuid="79c0585b-3379-4e0a-99d9-b49538fb23dd"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="1" width="113" height="14" uuid="53f1b22e-fc5a-4f88-8266-cfc3a11270d0"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Menu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="113" y="0" width="95" height="15" uuid="fb602258-051e-4ccb-b324-e092096c55ce"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="208" y="0" width="21" height="15" uuid="5603d09b-1348-4adc-91ce-eb3427672d27"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="0" width="79" height="15" uuid="e3e870a0-a174-4d96-b2d8-14edc26786f6"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="14" width="308" height="1" uuid="e1280dee-c6dc-4190-b653-3ed248612935"/>
+				<graphicElement>
+					<pen lineWidth="0.75" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="113" height="15" uuid="9e9fc6b0-200e-4405-9a21-40dcd79965af"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_menu}]]></textFieldExpression>
+			</textField>
+			<textField pattern="Rp,000">
+				<reportElement x="113" y="0" width="95" height="15" uuid="de45d9fc-8409-41b1-9e01-1a3ad05bfa87"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{harga_menu}]]></textFieldExpression>
+			</textField>
+			<textField pattern="Rp,000">
+				<reportElement x="229" y="0" width="79" height="15" uuid="b133fac7-3a53-478d-b07b-8399ff3de76e"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_menu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="208" y="0" width="21" height="15" uuid="0642d0b3-a2cb-4b64-9caa-81a6bebc55f4"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="18" splitType="Stretch">
+			<staticText>
+				<reportElement x="169" y="2" width="60" height="15" uuid="8183bf9a-fea1-4f0e-b204-fee524a5e648"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Grand Total :]]></text>
+			</staticText>
+			<textField pattern="Rp,000">
+				<reportElement x="229" y="2" width="79" height="15" uuid="33a75a6d-c815-4b4d-9397-014eaaabe3fe"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sub_total}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="308" height="1" uuid="958d73a5-97dc-44d2-8677-c8c84d9ea5de"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</summary>
+</jasperReport>
